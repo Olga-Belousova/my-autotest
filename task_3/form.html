@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+	<meta charset="utf-8">
+	<title>Задание №3 form</title>
+	</head>
+	<body>
+	<h2>Заполните параметры перед запуском тестирования</h2>
+	<form action="/hendler.php" method="post">
+		<label>
+				Имя тестировщика <input type="text" name="nameTester">
+		</label>
+		<br><br>
+		<label>Вид тестирования производительности 
+			<select>
+				<option>Нагрузочное</option>
+				<option>Стабильности</option>
+				<option>Отказоустойчивости</option>
+			</select>
+		</label>
+		<br><br>
+		<label>Тестовые сценарии:<br> 
+			<input type="radio" value="1" name="testCase">Поиск документов<br>
+			<input type="radio" value="2" name="testCase">Прием платежей<br>
+			<input type="radio" value="3" name="testCase">Формирование отчетов<br>
+		</label>
+		<br>
+		<input type="checkbox">Сохранять отчет о тестировании
+		<br><br>
+		<label>
+			Примечание<br> <textarea name="note"></textarea>
+		</label>
+		<br>
+		<p><a href="index.html">Отмена</a></p>
+		<hr>
+		<button type="submit">СТАРТ ТЕСТИРОВАНИЯ</button>
+	</form>
+	</body>
+</html>
