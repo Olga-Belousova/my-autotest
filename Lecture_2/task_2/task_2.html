@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="utf-8">
+		<title>Задание №2</title>
+	</head>
+	<body>
+		<h2>Заполните форму регистрации</h2>
+		<form action="/hendler.php" method="post">
+			<p>
+			<label>
+				Логин <input type="text" name="loginClient">
+			</label>
+			</p>
+			<p>
+			<label>
+				Пароль <input type="password" name="passClient">
+			</label>
+			<button type="button">Проверить пароль</button>
+			</p>
+			<p>
+			<label>
+				Электронная почта <input type="text" name="emailClient">
+			</label>
+			</p>
+			<p>
+			<label>Город 
+				<select>
+					<option>Новосибирск</option>
+					<option>Москва</option>
+					<option>Екатеринбург</option>
+				</select>
+			</label>
+			</p>
+			<p>
+			<label>Пол 
+				<input type="radio" value="1" name="genderClient">М
+				<input type="radio" value="2" name="genderClient">Ж
+			</label>
+			</p>
+			<input type="checkbox">Согласен с условием регистрации 
+			<hr>
+			<button type="submit">Регистрация</button>
+		</form>
+	</body>
+</html>
