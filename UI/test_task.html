@@ -11,6 +11,10 @@
 <tr><td rowspan="1" colspan="3">success_create</td></tr>
 </thead>
 <tbody>
+<tr><td>store</td><td>Доработать форму<datalist><option>Поиск задачи</option><option>Пиоск задачи</option><option>Доработать форму</option></datalist></td><td>summary</td>
+</tr>
+<tr><td>store</td><td>Доработать форму ввода пароля<datalist><option>Описание задачи</option><option>Доработать форму ввода пароля</option></datalist></td><td>description</td>
+</tr>
 <tr><td>open</td><td>https://academ-it.ru/mantisbt/login_page.php<datalist><option>https://academ-it.ru/mantisbt/login_page.php</option></datalist></td><td></td>
 </tr>
 <tr><td>storeLocation</td><td>url_current_page<datalist><option>url_current_page</option></datalist></td><td></td>
@@ -35,8 +39,6 @@
 </tr>
 <tr><td>endIf</td><td><datalist><option></option></datalist></td><td></td>
 </tr>
-<tr><td>verifyText</td><td>//div[@id='breadcrumbs']/ul/li/span<datalist><option>//div[@id='breadcrumbs']/ul/li/span</option><option>//li/span</option><option>css=span.label.hidden-xs.label-default.arrowed</option></datalist></td><td>администратор</td>
-</tr>
 <tr><td>storeText</td><td>//div[@id='breadcrumbs']/div/a<datalist><option>//div[@id='breadcrumbs']/div/a</option><option>link=0026351</option><option>//a[contains(text(),'0026351')]</option><option>//a[contains(@href, '/mantisbt/view.php?id=26351')]</option><option>//div[3]/div[2]/div/div/a</option><option>css=a[title="[новая] Доработать форму"]</option></datalist></td><td>last_id</td>
 </tr>
 <tr><td>click</td><td>//div[@id='sidebar']/ul/li[3]/a/span<datalist><option>//div[@id='sidebar']/ul/li[3]/a/span</option><option>//li[3]/a/span</option></datalist></td><td></td>
@@ -49,11 +51,11 @@
 </tr>
 <tr><td>click</td><td>id=summary<datalist><option>id=summary</option><option>name=summary</option><option>//input[@id='summary']</option><option>//form[@id='report_bug_form']/div/div[2]/div/div/table/tbody/tr[7]/td/input</option><option>//td/input</option><option>css=#summary</option></datalist></td><td></td>
 </tr>
-<tr><td>type</td><td>id=summary<datalist><option>id=summary</option><option>name=summary</option><option>//input[@id='summary']</option><option>//form[@id='report_bug_form']/div/div[2]/div/div/table/tbody/tr[7]/td/input</option><option>//td/input</option><option>css=#summary</option></datalist></td><td>Доработать форму</td>
+<tr><td>type</td><td>id=summary<datalist><option>id=summary</option><option>name=summary</option><option>//input[@id='summary']</option><option>//form[@id='report_bug_form']/div/div[2]/div/div/table/tbody/tr[7]/td/input</option><option>//td/input</option><option>css=#summary</option></datalist></td><td>${summary}</td>
 </tr>
 <tr><td>click</td><td>id=description<datalist><option>id=description</option><option>name=description</option><option>//textarea[@id='description']</option><option>//form[@id='report_bug_form']/div/div[2]/div/div/table/tbody/tr[8]/td/textarea</option><option>//textarea</option><option>css=#description</option></datalist></td><td></td>
 </tr>
-<tr><td>type</td><td>id=description<datalist><option>id=description</option><option>name=description</option><option>//textarea[@id='description']</option><option>//form[@id='report_bug_form']/div/div[2]/div/div/table/tbody/tr[8]/td/textarea</option><option>//textarea</option><option>css=#description</option></datalist></td><td>Доработать форму ввода пароля</td>
+<tr><td>type</td><td>id=description<datalist><option>id=description</option><option>name=description</option><option>//textarea[@id='description']</option><option>//form[@id='report_bug_form']/div/div[2]/div/div/table/tbody/tr[8]/td/textarea</option><option>//textarea</option><option>css=#description</option></datalist></td><td>${description}</td>
 </tr>
 <tr><td>click</td><td>//input[@value='Создать задачу']<datalist><option>//input[@value='Создать задачу']</option><option>//form[@id='report_bug_form']/div/div[2]/div[2]/input</option><option>//div[2]/input</option><option>css=input.btn.btn-primary.btn-white.btn-round</option></datalist></td><td></td>
 </tr>
@@ -61,9 +63,9 @@
 </tr>
 <tr><td>click</td><td>//div[@id='main-container']/div[2]/div[2]/div/div/div/div[2]/div/a<datalist><option>link=Просмотреть созданную задачу 26345</option><option>//a[contains(text(),'Просмотреть созданную задачу 26345')]</option><option>//div[@id='main-container']/div[2]/div[2]/div/div/div/div[2]/div/a</option><option>xpath=(//a[contains(@href, 'view.php?id=26345')])[2]</option><option>//div[2]/div/a</option></datalist></td><td></td>
 </tr>
-<tr><td>verifyText</td><td>css=td.bug-summary<datalist><option>//div[@id='main-container']/div[2]/div[2]/div/div/div/div[2]/div[2]/div/table/tbody/tr[10]/td</option><option>//tr[10]/td</option><option>css=td.bug-summary</option></datalist></td><td>*: Доработать форму</td>
+<tr><td>verifyText</td><td>css=td.bug-summary<datalist><option>//div[@id='main-container']/div[2]/div[2]/div/div/div/div[2]/div[2]/div/table/tbody/tr[10]/td</option><option>//tr[10]/td</option><option>css=td.bug-summary</option></datalist></td><td>*: ${summary}</td>
 </tr>
-<tr><td>verifyText</td><td>css=td.bug-description<datalist><option>//div[@id='main-container']/div[2]/div[2]/div/div/div/div[2]/div[2]/div/table/tbody/tr[11]/td</option><option>//tr[11]/td</option><option>css=td.bug-description</option></datalist></td><td>Доработать форму ввода пароля</td>
+<tr><td>verifyText</td><td>css=td.bug-description<datalist><option>//div[@id='main-container']/div[2]/div[2]/div/div/div/div[2]/div[2]/div/table/tbody/tr[11]/td</option><option>//tr[11]/td</option><option>css=td.bug-description</option></datalist></td><td>${description}</td>
 </tr>
 <tr><td>click</td><td>//div[@id='navbar-container']/div[2]/ul/li[2]/a/i[2]<datalist><option>//div[@id='navbar-container']/div[2]/ul/li[2]/a/i[2]</option><option>//i[2]</option><option>css=i.ace-icon.fa.fa-angle-down</option></datalist></td><td></td>
 </tr>
@@ -75,6 +77,10 @@
 <tr><td rowspan="1" colspan="3">clon_task</td></tr>
 </thead>
 <tbody>
+<tr><td>store</td><td>Клонирование задачи<datalist><option>Доработать форму</option><option>Поиск задачи</option><option>Пиоск задачи</option><option>Клонирование задачи</option></datalist></td><td>summary</td>
+</tr>
+<tr><td>store</td><td>Описание задачи<datalist><option>Доработать форму ввода пароля</option><option>Описание задачи</option></datalist></td><td>description</td>
+</tr>
 <tr><td>open</td><td>https://academ-it.ru/mantisbt/login_page.php<datalist><option>https://academ-it.ru/mantisbt/login_page.php</option></datalist></td><td></td>
 </tr>
 <tr><td>click</td><td>id=username<datalist><option>id=username</option><option>name=username</option><option>//input[@id='username']</option><option>//form[@id='login-form']/fieldset/label/span/input</option><option>//span/input</option><option>css=#username</option></datalist></td><td></td>
@@ -101,11 +107,11 @@
 </tr>
 <tr><td>click</td><td>id=summary<datalist><option>id=summary</option><option>name=summary</option><option>//input[@id='summary']</option><option>//form[@id='report_bug_form']/div/div[2]/div/div/table/tbody/tr[7]/td/input</option><option>//td/input</option><option>css=#summary</option></datalist></td><td></td>
 </tr>
-<tr><td>type</td><td>id=summary<datalist><option>id=summary</option><option>name=summary</option><option>//input[@id='summary']</option><option>//form[@id='report_bug_form']/div/div[2]/div/div/table/tbody/tr[7]/td/input</option><option>//td/input</option><option>css=#summary</option></datalist></td><td>Клонирование задачи</td>
+<tr><td>type</td><td>id=summary<datalist><option>id=summary</option><option>name=summary</option><option>//input[@id='summary']</option><option>//form[@id='report_bug_form']/div/div[2]/div/div/table/tbody/tr[7]/td/input</option><option>//td/input</option><option>css=#summary</option></datalist></td><td>${summary}</td>
 </tr>
 <tr><td>click</td><td>id=description<datalist><option>id=description</option><option>name=description</option><option>//textarea[@id='description']</option><option>//form[@id='report_bug_form']/div/div[2]/div/div/table/tbody/tr[8]/td/textarea</option><option>//textarea</option><option>css=#description</option></datalist></td><td></td>
 </tr>
-<tr><td>type</td><td>id=description<datalist><option>id=description</option><option>name=description</option><option>//textarea[@id='description']</option><option>//form[@id='report_bug_form']/div/div[2]/div/div/table/tbody/tr[8]/td/textarea</option><option>//textarea</option><option>css=#description</option></datalist></td><td>Описание задачи</td>
+<tr><td>type</td><td>id=description<datalist><option>id=description</option><option>name=description</option><option>//textarea[@id='description']</option><option>//form[@id='report_bug_form']/div/div[2]/div/div/table/tbody/tr[8]/td/textarea</option><option>//textarea</option><option>css=#description</option></datalist></td><td>${description}</td>
 </tr>
 <tr><td>click</td><td>//input[@value='Создать задачу']<datalist><option>//input[@value='Создать задачу']</option><option>//form[@id='report_bug_form']/div/div[2]/div[2]/input</option><option>//div[2]/input</option><option>css=input.btn.btn-primary.btn-white.btn-round</option></datalist></td><td></td>
 </tr>
@@ -113,9 +119,9 @@
 </tr>
 <tr><td>click</td><td>//div[@id='main-container']/div[2]/div[2]/div/div/div/div[2]/div/a<datalist><option>//div[@id='main-container']/div[2]/div[2]/div/div/div/div[2]/div/a</option><option>link=Просмотреть созданную задачу 26345</option><option>//a[contains(text(),'Просмотреть созданную задачу 26345')]</option><option>xpath=(//a[contains(@href, 'view.php?id=26345')])[2]</option><option>//div[2]/div/a</option></datalist></td><td></td>
 </tr>
-<tr><td>verifyText</td><td>css=td.bug-summary<datalist><option>css=td.bug-summary</option><option>//div[@id='main-container']/div[2]/div[2]/div/div/div/div[2]/div[2]/div/table/tbody/tr[10]/td</option><option>//tr[10]/td</option></datalist></td><td>*: Клонирование задачи</td>
+<tr><td>verifyText</td><td>css=td.bug-summary<datalist><option>css=td.bug-summary</option><option>//div[@id='main-container']/div[2]/div[2]/div/div/div/div[2]/div[2]/div/table/tbody/tr[10]/td</option><option>//tr[10]/td</option></datalist></td><td>*: ${summary}</td>
 </tr>
-<tr><td>verifyText</td><td>css=td.bug-description<datalist><option>css=td.bug-description</option><option>//div[@id='main-container']/div[2]/div[2]/div/div/div/div[2]/div[2]/div/table/tbody/tr[11]/td</option><option>//tr[11]/td</option></datalist></td><td>Описание задачи</td>
+<tr><td>verifyText</td><td>css=td.bug-description<datalist><option>css=td.bug-description</option><option>//div[@id='main-container']/div[2]/div[2]/div/div/div/div[2]/div[2]/div/table/tbody/tr[11]/td</option><option>//tr[11]/td</option></datalist></td><td>${description}</td>
 </tr>
 <tr><td>click</td><td>//input[@value='Клонировать']<datalist><option>//input[@value='Клонировать']</option><option>//div[@id='main-container']/div[2]/div[2]/div/div/div/div[2]/div[2]/div/table/tfoot/tr/td/div/div[6]/form/fieldset/input[2]</option><option>//div[6]/form/fieldset/input[2]</option></datalist></td><td></td>
 </tr>
@@ -125,9 +131,9 @@
 </tr>
 <tr><td>click</td><td>link=Просмотреть созданную задачу *<datalist><option>link=Просмотреть созданную задачу *</option><option>link=Просмотреть созданную задачу 26393</option><option>//a[contains(text(),'Просмотреть созданную задачу 26393')]</option><option>//div[@id='main-container']/div[2]/div[2]/div/div/div/div[2]/div/a</option><option>xpath=(//a[contains(@href, 'view.php?id=26393')])[2]</option><option>//div[2]/div/a</option></datalist></td><td></td>
 </tr>
-<tr><td>verifyText</td><td>css=td.bug-summary<datalist><option>css=td.bug-summary</option><option>//div[@id='main-container']/div[2]/div[2]/div/div/div/div[2]/div[2]/div/table/tbody/tr[10]/td</option><option>//tr[10]/td</option></datalist></td><td>*: Клонирование задачи</td>
+<tr><td>verifyText</td><td>css=td.bug-summary<datalist><option>css=td.bug-summary</option><option>//div[@id='main-container']/div[2]/div[2]/div/div/div/div[2]/div[2]/div/table/tbody/tr[10]/td</option><option>//tr[10]/td</option></datalist></td><td>*: ${summary}</td>
 </tr>
-<tr><td>verifyText</td><td>css=td.bug-description<datalist><option>css=td.bug-description</option><option>//div[@id='main-container']/div[2]/div[2]/div/div/div/div[2]/div[2]/div/table/tbody/tr[11]/td</option><option>//tr[11]/td</option></datalist></td><td>Описание задачи</td>
+<tr><td>verifyText</td><td>css=td.bug-description<datalist><option>css=td.bug-description</option><option>//div[@id='main-container']/div[2]/div[2]/div/div/div/div[2]/div[2]/div/table/tbody/tr[11]/td</option><option>//tr[11]/td</option></datalist></td><td>${description}</td>
 </tr>
 <tr><td>verifyNotText</td><td>css=td.bug-id<datalist><option>css=td.bug-id</option><option>//div[@id='main-container']/div[2]/div[2]/div/div/div/div[2]/div[2]/div/table/tbody/tr[2]/td</option><option>//tr[2]/td</option></datalist></td><td>${last_id}</td>
 </tr>
@@ -141,6 +147,10 @@
 <tr><td rowspan="1" colspan="3">delete_task</td></tr>
 </thead>
 <tbody>
+<tr><td>store</td><td>Удаление задачи<datalist><option>Клонирование задачи</option><option>Доработать форму</option><option>Поиск задачи</option><option>Пиоск задачи</option><option>Удаление задачи</option></datalist></td><td>summary</td>
+</tr>
+<tr><td>store</td><td>Описание задачи<datalist><option>Описание задачи</option><option>Доработать форму ввода пароля</option></datalist></td><td>description</td>
+</tr>
 <tr><td>open</td><td>https://academ-it.ru/mantisbt/login_page.php<datalist><option>https://academ-it.ru/mantisbt/login_page.php</option></datalist></td><td></td>
 </tr>
 <tr><td>click</td><td>id=username<datalist><option>id=username</option><option>name=username</option><option>//input[@id='username']</option><option>//form[@id='login-form']/fieldset/label/span/input</option><option>//span/input</option><option>css=#username</option></datalist></td><td></td>
@@ -167,25 +177,31 @@
 </tr>
 <tr><td>click</td><td>id=summary<datalist><option>id=summary</option><option>name=summary</option><option>//input[@id='summary']</option><option>//form[@id='report_bug_form']/div/div[2]/div/div/table/tbody/tr[7]/td/input</option><option>//td/input</option><option>css=#summary</option></datalist></td><td></td>
 </tr>
-<tr><td>type</td><td>id=summary<datalist><option>id=summary</option><option>name=summary</option><option>//input[@id='summary']</option><option>//form[@id='report_bug_form']/div/div[2]/div/div/table/tbody/tr[7]/td/input</option><option>//td/input</option><option>css=#summary</option></datalist></td><td>Удаление задачи</td>
+<tr><td>type</td><td>id=summary<datalist><option>id=summary</option><option>name=summary</option><option>//input[@id='summary']</option><option>//form[@id='report_bug_form']/div/div[2]/div/div/table/tbody/tr[7]/td/input</option><option>//td/input</option><option>css=#summary</option></datalist></td><td>${summary}</td>
 </tr>
 <tr><td>click</td><td>id=description<datalist><option>id=description</option><option>name=description</option><option>//textarea[@id='description']</option><option>//form[@id='report_bug_form']/div/div[2]/div/div/table/tbody/tr[8]/td/textarea</option><option>//textarea</option><option>css=#description</option></datalist></td><td></td>
 </tr>
-<tr><td>type</td><td>id=description<datalist><option>id=description</option><option>name=description</option><option>//textarea[@id='description']</option><option>//form[@id='report_bug_form']/div/div[2]/div/div/table/tbody/tr[8]/td/textarea</option><option>//textarea</option><option>css=#description</option></datalist></td><td>Описание задачи</td>
+<tr><td>type</td><td>id=description<datalist><option>id=description</option><option>name=description</option><option>//textarea[@id='description']</option><option>//form[@id='report_bug_form']/div/div[2]/div/div/table/tbody/tr[8]/td/textarea</option><option>//textarea</option><option>css=#description</option></datalist></td><td>${description}</td>
 </tr>
 <tr><td>click</td><td>//input[@value='Создать задачу']<datalist><option>//input[@value='Создать задачу']</option><option>//form[@id='report_bug_form']/div/div[2]/div[2]/input</option><option>//div[2]/input</option><option>css=input.btn.btn-primary.btn-white.btn-round</option></datalist></td><td></td>
 </tr>
-<tr><td>verifyNotText</td><td>//div[@id='breadcrumbs']/div/a<datalist><option>//div[@id='breadcrumbs']/div/a</option></datalist></td><td>${last_id}</td>
+<tr><td>click</td><td>link=Просмотреть созданную задачу *<datalist><option>link=Просмотреть созданную задачу *</option><option>link=Просмотреть созданную задачу 26368</option><option>//a[contains(text(),'Просмотреть созданную задачу 26368')]</option><option>//div[@id='main-container']/div[2]/div[2]/div/div/div/div[2]/div/a</option><option>xpath=(//a[contains(@href, 'view.php?id=26368')])[2]</option><option>//div[2]/div/a</option></datalist></td><td></td>
 </tr>
-<tr><td>click</td><td>//div[@id='main-container']/div[2]/div[2]/div/div/div/div[2]/div/a<datalist><option>//div[@id='main-container']/div[2]/div[2]/div/div/div/div[2]/div/a</option><option>link=Просмотреть созданную задачу 26345</option><option>//a[contains(text(),'Просмотреть созданную задачу 26345')]</option><option>xpath=(//a[contains(@href, 'view.php?id=26345')])[2]</option><option>//div[2]/div/a</option></datalist></td><td></td>
+<tr><td>verifyText</td><td>css=td.bug-summary<datalist><option>css=td.bug-summary</option><option>//div[@id='main-container']/div[2]/div[2]/div/div/div/div[2]/div[2]/div/table/tbody/tr[10]/td</option><option>//tr[10]/td</option></datalist></td><td>*: ${summary}</td>
 </tr>
-<tr><td>verifyText</td><td>css=td.bug-summary<datalist><option>css=td.bug-summary</option><option>//div[@id='main-container']/div[2]/div[2]/div/div/div/div[2]/div[2]/div/table/tbody/tr[10]/td</option><option>//tr[10]/td</option></datalist></td><td>*: Удаление задачи</td>
+<tr><td>verifyText</td><td>css=td.bug-description<datalist><option>css=td.bug-description</option><option>//div[@id='main-container']/div[2]/div[2]/div/div/div/div[2]/div[2]/div/table/tbody/tr[11]/td</option><option>//tr[11]/td</option></datalist></td><td>${description}</td>
 </tr>
-<tr><td>verifyText</td><td>css=td.bug-description<datalist><option>css=td.bug-description</option><option>//div[@id='main-container']/div[2]/div[2]/div/div/div/div[2]/div[2]/div/table/tbody/tr[11]/td</option><option>//tr[11]/td</option></datalist></td><td>Описание задачи</td>
+<tr><td>storeText</td><td>css=td.bug-id<datalist><option>css=td.bug-id</option><option>//div[@id='main-container']/div[2]/div[2]/div/div/div/div[2]/div[2]/div/table/tbody/tr[2]/td</option><option>//tr[2]/td</option></datalist></td><td>bug_id</td>
 </tr>
 <tr><td>click</td><td>//input[@value='Удалить']<datalist><option>//input[@value='Удалить']</option><option>//div[@id='main-container']/div[2]/div[2]/div/div/div/div[2]/div[2]/div/table/tfoot/tr/td/div/div[10]/form/fieldset/input[3]</option><option>//div[10]/form/fieldset/input[3]</option></datalist></td><td></td>
 </tr>
 <tr><td>click</td><td>//input[@value='Удалить задачи']<datalist><option>//input[@value='Удалить задачи']</option><option>//div[@id='action-group-div']/form/div/div[2]/div[2]/input</option><option>//div[2]/input</option><option>css=input.btn.btn-primary.btn-white.btn-round</option></datalist></td><td></td>
+</tr>
+<tr><td>click</td><td>//div[@id='sidebar']/ul/li/a/span<datalist><option>//div[@id='sidebar']/ul/li/a/span</option><option>//div[2]/div/ul/li/a/span</option><option>css=span.menu-text</option></datalist></td><td></td>
+</tr>
+<tr><td>click</td><td>name=bug_id<datalist><option>name=bug_id</option><option>//input[@name='bug_id']</option><option>//div[@id='nav-search']/form/span/input</option><option>//input</option><option>css=input[name="bug_id"]</option></datalist></td><td></td>
+</tr>
+<tr><td>type</td><td>name=bug_id<datalist><option>name=bug_id</option><option>//input[@name='bug_id']</option><option>//div[@id='nav-search']/form/span/input</option><option>//input</option><option>css=input[name="bug_id"]</option></datalist></td><td>${bug_id}</td>
 </tr>
 <tr><td>sendKeys</td><td>name=bug_id<datalist><option>name=bug_id</option><option>//input[@name='bug_id']</option><option>//div[@id='nav-search']/form/span/input</option><option>//input</option><option>css=input[name="bug_id"]</option></datalist></td><td>${KEY_ENTER}</td>
 </tr>
@@ -201,6 +217,10 @@
 <tr><td rowspan="1" colspan="3">edit_task</td></tr>
 </thead>
 <tbody>
+<tr><td>store</td><td>Редактирование задачи<datalist><option>Доработать форму</option><option>Поиск задачи</option><option>Пиоск задачи</option><option>Редактирование задачи</option></datalist></td><td>summary</td>
+</tr>
+<tr><td>store</td><td>Описание задачи<datalist><option>Доработать форму ввода пароля</option><option>Описание задачи</option><option>Описание задачи (редактирование)</option></datalist></td><td>description</td>
+</tr>
 <tr><td>open</td><td>https://academ-it.ru/mantisbt/login_page.php<datalist><option>https://academ-it.ru/mantisbt/login_page.php</option></datalist></td><td></td>
 </tr>
 <tr><td>click</td><td>id=username<datalist><option>id=username</option><option>name=username</option><option>//input[@id='username']</option><option>//form[@id='login-form']/fieldset/label/span/input</option><option>//span/input</option><option>css=#username</option></datalist></td><td></td>
@@ -215,9 +235,37 @@
 </tr>
 <tr><td>click</td><td>//input[@value='Войти']<datalist><option>//input[@value='Войти']</option><option>//form[@id='login-form']/fieldset/input[2]</option><option>//input[2]</option><option>css=input.width-40.pull-right.btn.btn-success.btn-inverse.bigger-110</option></datalist></td><td></td>
 </tr>
+<tr><td>click</td><td>//div[@id='sidebar']/ul/li[3]/a/span<datalist><option>//div[@id='sidebar']/ul/li[3]/a/span</option><option>//li[3]/a/span</option></datalist></td><td></td>
+</tr>
+<tr><td>click</td><td>id=reproducibility<datalist><option>id=reproducibility</option><option>name=reproducibility</option><option>//select[@id='reproducibility']</option><option>//form[@id='report_bug_form']/div/div[2]/div/div/table/tbody/tr[2]/td/select</option><option>//tr[2]/td/select</option><option>css=#reproducibility</option></datalist></td><td></td>
+</tr>
+<tr><td>select</td><td>id=reproducibility<datalist><option>id=reproducibility</option><option>name=reproducibility</option><option>//select[@id='reproducibility']</option><option>//form[@id='report_bug_form']/div/div[2]/div/div/table/tbody/tr[2]/td/select</option><option>//tr[2]/td/select</option><option>css=#reproducibility</option></datalist></td><td>label=неприменимо</td>
+</tr>
+<tr><td>click</td><td>//option[@value='100']<datalist><option>//option[@value='100']</option><option>//select[@id='reproducibility']/option[6]</option><option>//option[6]</option><option>css=option[value="100"]</option></datalist></td><td></td>
+</tr>
+<tr><td>click</td><td>id=summary<datalist><option>id=summary</option><option>name=summary</option><option>//input[@id='summary']</option><option>//form[@id='report_bug_form']/div/div[2]/div/div/table/tbody/tr[7]/td/input</option><option>//td/input</option><option>css=#summary</option></datalist></td><td></td>
+</tr>
+<tr><td>type</td><td>id=summary<datalist><option>id=summary</option><option>name=summary</option><option>//input[@id='summary']</option><option>//form[@id='report_bug_form']/div/div[2]/div/div/table/tbody/tr[7]/td/input</option><option>//td/input</option><option>css=#summary</option></datalist></td><td>${summary}</td>
+</tr>
+<tr><td>click</td><td>id=description<datalist><option>id=description</option><option>name=description</option><option>//textarea[@id='description']</option><option>//form[@id='report_bug_form']/div/div[2]/div/div/table/tbody/tr[8]/td/textarea</option><option>//textarea</option><option>css=#description</option></datalist></td><td></td>
+</tr>
+<tr><td>type</td><td>id=description<datalist><option>id=description</option><option>name=description</option><option>//textarea[@id='description']</option><option>//form[@id='report_bug_form']/div/div[2]/div/div/table/tbody/tr[8]/td/textarea</option><option>//textarea</option><option>css=#description</option></datalist></td><td>${description}</td>
+</tr>
+<tr><td>click</td><td>//input[@value='Создать задачу']<datalist><option>//input[@value='Создать задачу']</option><option>//form[@id='report_bug_form']/div/div[2]/div[2]/input</option><option>//div[2]/input</option><option>css=input.btn.btn-primary.btn-white.btn-round</option></datalist></td><td></td>
+</tr>
+<tr><td>click</td><td>link=Просмотреть созданную задачу *<datalist><option>link=Просмотреть созданную задачу *</option><option>link=Просмотреть созданную задачу 26368</option><option>//a[contains(text(),'Просмотреть созданную задачу 26368')]</option><option>//div[@id='main-container']/div[2]/div[2]/div/div/div/div[2]/div/a</option><option>xpath=(//a[contains(@href, 'view.php?id=26368')])[2]</option><option>//div[2]/div/a</option></datalist></td><td></td>
+</tr>
+<tr><td>verifyText</td><td>css=td.bug-summary<datalist><option>css=td.bug-summary</option><option>//div[@id='main-container']/div[2]/div[2]/div/div/div/div[2]/div[2]/div/table/tbody/tr[10]/td</option><option>//tr[10]/td</option></datalist></td><td>*: ${summary}</td>
+</tr>
+<tr><td>verifyText</td><td>css=td.bug-description<datalist><option>css=td.bug-description</option><option>//div[@id='main-container']/div[2]/div[2]/div/div/div/div[2]/div[2]/div/table/tbody/tr[11]/td</option><option>//tr[11]/td</option></datalist></td><td>${description}</td>
+</tr>
+<tr><td>storeText</td><td>css=td.bug-id<datalist><option>css=td.bug-id</option><option>//div[@id='main-container']/div[2]/div[2]/div/div/div/div[2]/div[2]/div/table/tbody/tr[2]/td</option><option>//tr[2]/td</option></datalist></td><td>bug_id</td>
+</tr>
+<tr><td>click</td><td>//div[@id='sidebar']/ul/li/a/span<datalist><option>//div[@id='sidebar']/ul/li/a/span</option><option>//div[2]/div/ul/li/a/span</option><option>css=span.menu-text</option></datalist></td><td></td>
+</tr>
 <tr><td>click</td><td>name=bug_id<datalist><option>name=bug_id</option><option>//input[@name='bug_id']</option><option>//div[@id='nav-search']/form/span/input</option><option>//input</option><option>css=input[name="bug_id"]</option></datalist></td><td></td>
 </tr>
-<tr><td>type</td><td>name=bug_id<datalist><option>name=bug_id</option><option>//input[@name='bug_id']</option><option>//div[@id='nav-search']/form/span/input</option><option>//input</option><option>css=input[name="bug_id"]</option></datalist></td><td>0026384</td>
+<tr><td>type</td><td>name=bug_id<datalist><option>name=bug_id</option><option>//input[@name='bug_id']</option><option>//div[@id='nav-search']/form/span/input</option><option>//input</option><option>css=input[name="bug_id"]</option></datalist></td><td>${bug_id}</td>
 </tr>
 <tr><td>sendKeys</td><td>name=bug_id<datalist><option>name=bug_id</option><option>//input[@name='bug_id']</option><option>//div[@id='nav-search']/form/span/input</option><option>//input</option><option>css=input[name="bug_id"]</option></datalist></td><td>${KEY_ENTER}</td>
 </tr>
@@ -225,21 +273,11 @@
 </tr>
 <tr><td>click</td><td>id=description<datalist><option>id=description</option><option>name=description</option><option>//textarea[@id='description']</option><option>//form[@id='update_bug_form']/div/div[2]/div/div/table/tbody/tr[12]/td/textarea</option><option>//textarea</option><option>css=#description</option></datalist></td><td></td>
 </tr>
-<tr><td>type</td><td>id=description<datalist><option>id=description</option><option>name=description</option><option>//textarea[@id='description']</option><option>//form[@id='update_bug_form']/div/div[2]/div/div/table/tbody/tr[12]/td/textarea</option><option>//textarea</option><option>css=#description</option></datalist></td><td>Описание задачи (редактирование)</td>
+<tr><td>type</td><td>id=description<datalist><option>id=description</option><option>name=description</option><option>//textarea[@id='description']</option><option>//form[@id='update_bug_form']/div/div[2]/div/div/table/tbody/tr[12]/td/textarea</option><option>//textarea</option><option>css=#description</option></datalist></td><td>${description} (редактирование)</td>
 </tr>
 <tr><td>click</td><td>//input[@value='Изменить данные']<datalist><option>//input[@value='Изменить данные']</option><option>//form[@id='update_bug_form']/div/div[3]/input</option><option>//div[3]/input</option><option>css=input.btn.btn-primary.btn-white.btn-round</option></datalist></td><td></td>
 </tr>
-<tr><td>verifyNotText</td><td>css=td.bug-description<datalist><option>//div[@id='main-container']/div[2]/div[2]/div/div/div/div[2]/div[2]/div/table/tbody/tr[11]/td</option><option>//tr[11]/td</option><option>css=td.bug-description</option></datalist></td><td>Описание задачи</td>
-</tr>
-<tr><td>click</td><td>//input[@value='Изменить']<datalist><option>//input[@value='Изменить']</option><option>//div[@id='main-container']/div[2]/div[2]/div/div/div/div[2]/div[2]/div/table/tfoot/tr/td/div/div/form/fieldset/input[2]</option><option>//input[2]</option><option>css=input.btn.btn-primary.btn-sm.btn-white.btn-round</option></datalist></td><td></td>
-</tr>
-<tr><td>click</td><td>id=description<datalist><option>id=description</option><option>name=description</option><option>//textarea[@id='description']</option><option>//form[@id='update_bug_form']/div/div[2]/div/div/table/tbody/tr[12]/td/textarea</option><option>//textarea</option><option>css=#description</option></datalist></td><td></td>
-</tr>
-<tr><td>type</td><td>id=description<datalist><option>id=description</option><option>name=description</option><option>//textarea[@id='description']</option><option>//form[@id='update_bug_form']/div/div[2]/div/div/table/tbody/tr[12]/td/textarea</option><option>//textarea</option><option>css=#description</option></datalist></td><td>Описание задачи</td>
-</tr>
-<tr><td>click</td><td>//input[@value='Изменить данные']<datalist><option>//input[@value='Изменить данные']</option><option>//form[@id='update_bug_form']/div/div[3]/input</option><option>//div[3]/input</option><option>css=input.btn.btn-primary.btn-white.btn-round</option></datalist></td><td></td>
-</tr>
-<tr><td>verifyNotText</td><td>css=td.bug-description<datalist><option>//div[@id='main-container']/div[2]/div[2]/div/div/div/div[2]/div[2]/div/table/tbody/tr[11]/td</option><option>//tr[11]/td</option><option>css=td.bug-description</option></datalist></td><td>Описание задачи (редактирование)</td>
+<tr><td>verifyNotText</td><td>css=td.bug-description<datalist><option>//div[@id='main-container']/div[2]/div[2]/div/div/div/div[2]/div[2]/div/table/tbody/tr[11]/td</option><option>//tr[11]/td</option><option>css=td.bug-description</option></datalist></td><td>${description}</td>
 </tr>
 <tr><td>click</td><td>//div[@id='navbar-container']/div[2]/ul/li[2]/a/span<datalist><option>//div[@id='navbar-container']/div[2]/ul/li[2]/a/span</option><option>//li[2]/a/span</option><option>css=span.user-info</option></datalist></td><td></td>
 </tr>
